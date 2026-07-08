@@ -1,15 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/v1/(.*)",
-      "dest": "/api/v1/$1"
-    }
+  "rewrites": [
+    { "source": "/v1/models", "destination": "/api/v1/models/route.js" },
+    { "source": "/v1/chat/completions", "destination": "/api/v1/chat/completions/route.js" }
   ],
   "headers": [
     {
