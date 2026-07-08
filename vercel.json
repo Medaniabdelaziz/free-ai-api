@@ -1,8 +1,10 @@
 {
   "functions": {
-    "api/v1/**/*.ts": {
-      "runtime": "edge",
-      "maxDuration": 60
+    "api/v1/models/route.js": {
+      "runtime": "@vercel/node@3.0.0"
+    },
+    "api/v1/chat/completions/route.js": {
+      "runtime": "@vercel/node@3.0.0"
     }
   },
   "headers": [
